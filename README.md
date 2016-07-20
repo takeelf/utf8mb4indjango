@@ -21,16 +21,16 @@ collation-server=utf8mb4_unicode_ci
 
 ### Change mysql database and tables
 
-ALTER DATABASE {database name} character set = utf8mb4 collate = utf8mb4_unicode_ci;
-ALTER TABLE {table name} CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ - ALTER DATABASE {database name} character set = utf8mb4 collate = utf8mb4_unicode_ci;
+ - ALTER TABLE {table name} CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
 
 
 ### Check
 
-SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
-select * from INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{database name}';
+ - SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
+ - select * from INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{database name}';
 
 
 
