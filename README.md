@@ -3,8 +3,8 @@ utf8mb4 with mysqlclient in django
 
 
 
-* Change my.cnf
-
+### Change my.cnf
+```sh
 [client]
 default-character-set=utf8mb4
 
@@ -16,10 +16,10 @@ init-connect='SET NAMES utf8mb4'
 character-set-client-handshake = FALSE
 character-set-server=utf8mb4
 collation-server=utf8mb4_unicode_ci
+```
 
 
-
-* Change mysql database and tables
+### Change mysql database and tables
 
 ALTER DATABASE {database name} character set = utf8mb4 collate = utf8mb4_unicode_ci;
 ALTER TABLE {table name} CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -27,7 +27,7 @@ ALTER TABLE {table name} CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicod
 
 
 
-* Check
+### Check
 
 SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
 select * from INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{database name}';
@@ -35,7 +35,7 @@ select * from INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '{database name}';
 
 
 * Set settings.py
-
+```sh
 def _set_character_set(self, charset):
     """Set the connection character set to charset. The character
     set can only be changed in MySQL-4.1 and newer. If you try
@@ -80,7 +80,7 @@ DATABASES = {
                     }
     }
 }
-
+```
 
 
 
