@@ -34,7 +34,7 @@ collation-server=utf8mb4_unicode_ci
 
 
 
-* Set settings.py
+### Set settings.py
 ```sh
 def _set_character_set(self, charset):
     """Set the connection character set to charset. The character
