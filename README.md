@@ -1,5 +1,8 @@
 # utf8mb4indjango
+
 utf8mb4 with mysqlclient in django
+
+When show error "Incorrect string value: '\\xF0\\x9F ..."
 
 
 
